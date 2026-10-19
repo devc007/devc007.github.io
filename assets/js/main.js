@@ -433,13 +433,15 @@
         ['ok', 'deployment "portfolio" successfully rolled out'],
       ];
       const counter = { v: 0 };
+      let shown = 0;
       const tl = gsap.timeline();
       tl.to(counter, {
         v: 100, duration: 1.35, ease: 'power2.inOut',
         onUpdate: () => {
+          // transform only (no layout); touch the text only when the number changes
+          bar.style.transform = `scaleX(${counter.v / 100})`;
           const v = Math.round(counter.v);
-          countEl.textContent = v;
-          bar.style.width = `${v}%`;
+          if (v !== shown) { shown = v; countEl.textContent = v; }
         },
       }, 0);
       lines.forEach(([cls, text], i) => {
@@ -642,11 +644,15 @@
     ? Promise.race([document.fonts.ready, sleep(900)])
     : Promise.resolve();
 
-  fontsReady.then(() => {
-    initTapes();
-    initReveals();
-    initProjectVisuals();
-    return runBoot();
+  // Start the boot animation first, then set up the rest in small tasks so
+  // no single task blocks the main thread for long.
+  const nextTask = () => new Promise((r) => setTimeout(r, 0));
+  fontsReady.then(async () => {
+    const booted = runBoot();
+    await nextTask(); initTapes();
+    await nextTask(); initReveals();
+    await nextTask(); initProjectVisuals();
+    return booted;
   }).then(() => {
     heroIntro();
     startRotator();
