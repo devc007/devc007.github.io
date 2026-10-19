@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Devesh Chouhan — DevOps Engineer</title>
+  <meta name="description" content="Devesh Chouhan is a DevOps Engineer at Rover AI and a former CNCF LFX mentee at kgateway. Kubernetes, AWS, Terraform, CI/CD and Go.">
+  <meta name="author" content="Devesh Chouhan">
+  <meta name="theme-color" content="#07090d">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://devc007.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Devesh Chouhan">
+  <meta property="og:url" content="https://devc007.github.io/">
+  <meta property="og:title" content="Devesh Chouhan — DevOps Engineer">
+  <meta property="og:description" content="DevOps Engineer at Rover AI · CNCF LFX mentee (kgateway) · Kubernetes, AWS, Terraform, CI/CD and Go.">
+  <meta property="og:image" content="https://devc007.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Devesh Chouhan, DevOps Engineer: portfolio preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devesh Chouhan — DevOps Engineer">
+  <meta name="twitter:description" content="DevOps Engineer at Rover AI · CNCF LFX mentee (kgateway) · Kubernetes, AWS, Terraform, CI/CD and Go.">
+  <meta name="twitter:image" content="https://devc007.github.io/assets/img/og.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        if (sessionStorage.getItem('booted') || matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('no-boot');
+      } catch (e) { root.classList.add('no-boot'); }
+      // If the scripts never start (blocked or offline), show everything.
+      setTimeout(function () { if (!window.__ready) root.classList.add('fallback'); }, 4000);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Devesh Chouhan",
+    "url": "https://devc007.github.io/",
+    "image": "https://devc007.github.io/assets/img/og.png",
+    "jobTitle": "DevOps Engineer",
+    "worksFor": { "@type": "Organization", "name": "Rover AI" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Jabalpur Engineering College" },
+    "email": "mailto:deveshc850@gmail.com",
+    "sameAs": [
+      "https://github.com/devc007",
+      "https://www.linkedin.com/in/devesh-chauhan-715794276/"
+    ],
+    "knowsAbout": ["DevOps", "Kubernetes", "AWS", "Terraform", "CI/CD", "Docker", "Helm", "GitHub Actions", "Go", "Infrastructure as Code"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 128 128"><path fill="currentColor" fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 128 128"><path fill="currentColor" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g></symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></g></symbol>
+      <symbol id="i-merge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></g></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0Z"/></symbol>
+      <symbol id="i-ai" viewBox="0 0 24 24"><g fill="none" stroke="#c6ff3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3.5c.5 3.6 2.4 5.5 6 6-3.6.5-5.5 2.4-6 6-.5-3.6-2.4-5.5-6-6 3.6-.5 5.5-2.4 6-6Z"/><path d="M18 14c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3Z"/></g></symbol>
+      <symbol id="i-bars" viewBox="0 0 24 24"><g fill="#f2c811"><rect x="4" y="11" width="4" height="9" rx="1.2" opacity=".65"/><rect x="10" y="7" width="4" height="13" rx="1.2" opacity=".85"/><rect x="16" y="3" width="4" height="17" rx="1.2"/></g></symbol>
+      <symbol id="i-flow" viewBox="0 0 24 24"><g fill="none" stroke="#3de0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/><path d="M10 6.5h4.5a3 3 0 0 1 3 3V14"/><path d="m15.5 12 2 2 2-2"/></g></symbol>
+      <symbol id="i-apps" viewBox="0 0 24 24"><g fill="#a78bfa"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2" opacity=".7"/><rect x="3" y="13" width="8" height="8" rx="2" opacity=".7"/><rect x="13" y="13" width="8" height="8" rx="2" opacity=".45"/></g></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Boot sequence (first visit per session) -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__term"><div class="boot__lines" id="bootLines"></div></div>
+    <div class="boot__foot">
+      <span class="boot__label">deploying devesh-chouhan / portfolio</span>
+      <span class="boot__count"><span id="bootCount">0</span><small>%</small></span>
+    </div>
+    <div class="boot__bar"><span id="bootBar"></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Devesh Chouhan, back to top"><span class="nav__prompt">&gt;_</span><span>devesh<span class="nav__dot">.</span></span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#open-source">Open Source</a>
+        <a href="#projects">Projects</a>
+      </nav>
+      <a class="btn btn--primary btn--sm nav__cta magnetic" href="#contact"><span>Let's talk</span></a>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true" inert>
+    <nav aria-label="Mobile">
+      <a href="#about"><span>01</span>About</a>
+      <a href="#skills"><span>02</span>Skills</a>
+      <a href="#experience"><span>03</span>Experience</a>
+      <a href="#open-source"><span>04</span>Open Source</a>
+      <a href="#projects"><span>05</span>Projects</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="mailto:deveshc850@gmail.com">deveshc850@gmail.com</a>
+      <p><a href="https://github.com/devc007" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/devesh-chauhan-715794276/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <canvas class="hero__canvas" id="network" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="container hero__inner">
+        <a class="status-chip" href="#experience" data-hero>
+          <span class="pulse" aria-hidden="true"></span>
+          <span class="status-chip__state">Running</span>
+          <span class="status-chip__text">DevOps Engineer @ Rover AI</span>
+        </a>
+
+        <h1 class="hero__title" id="heroTitle">Devesh Chouhan<span class="accent">.</span></h1>
+
+        <div class="hero__row">
+          <div class="hero__copy">
+            <p class="hero__lead" data-hero>I build, automate &amp; scale<br>
+              <span class="visually-hidden">cloud-native infrastructure, Kubernetes workloads, CI/CD pipelines and infrastructure as code.</span>
+              <span class="rotator" aria-hidden="true"><span class="rotator__word" id="rotator">cloud-native infrastructure</span></span>
+            </p>
+            <p class="hero__text" data-hero>DevOps Engineer at <strong>Rover AI</strong> and former <strong>CNCF LFX mentee</strong> at kgateway, where I made end-to-end tests <strong class="hl">97% faster</strong>. Kubernetes, AWS, Terraform and Go are my everyday tools.</p>
+            <div class="hero__actions" data-hero>
+              <a class="btn btn--primary magnetic" href="#skills"><span>Explore my stack</span><svg class="i i--down" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+              <a class="btn btn--ghost magnetic" href="#contact"><span>Get in touch</span><svg class="i i--ur" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+            <ul class="socials" data-hero>
+              <li><a href="https://github.com/devc007" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/devesh-chauhan-715794276/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+              <li><a href="mailto:deveshc850@gmail.com" aria-label="Send me an email"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            </ul>
+          </div>
+
+          <figure class="terminal" data-hero aria-label="Terminal showing my career status">
+            <div class="terminal__bar">
+              <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="terminal__title">devesh@rover: ~</span>
+              <span class="terminal__tag">zsh</span>
+            </div>
+            <pre class="terminal__body" id="terminal"><span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-cmd">whoami</span>
+devesh-chouhan <span class="t-dim">·</span> devops engineer <span class="t-dim">·</span> india
+
+<span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-cmd">kubectl get jobs -n career</span>
+<span class="t-dim">NAME                       STATUS     DURATION</span>
+devops-engineer.rover-ai   <span class="t-ok">Running</span>    28d
+swe-intern.hosho-digital   <span class="t-dim">Complete</span>   4mo
+lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
+
+<span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-cmd">cat focus.txt</span>
+<span class="t-ok">kubernetes</span> · aws · terraform · ci/cd · go
+
+<span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-caret"></span></pre>
+          </figure>
+        </div>
+      </div>
+
+      <div class="container hero__foot" data-hero>
+        <a class="scroll-cue" href="#about"><span class="scroll-cue__line" aria-hidden="true"></span>Scroll to explore</a>
+        <p class="hero__meta"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>India · <time data-clock>--:--</time> IST</p>
+      </div>
+    </section>
+
+    <!-- ============ TAPES ============ -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--dark">
+        <div class="tape__track" data-dir="1">
+          <span class="tape__item">CI/CD<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Infrastructure as Code<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Cloud-Native<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Automation<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">E2E Testing<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Open Source<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Agentic AI<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Reliability<svg><use href="#i-spark"/></svg></span>
+        </div>
+      </div>
+      <div class="tape tape--lime">
+        <div class="tape__track" data-dir="-1">
+          <span class="tape__item">Kubernetes<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Docker<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">AWS<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Terraform<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Helm<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">GitHub Actions<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Ansible<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Go<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Linux<svg><use href="#i-spark"/></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 01 ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>01</b>About</span>
+          <span class="section-head__cmd">$ cat about.md</span>
+        </header>
+
+        <h2 class="visually-hidden">About me</h2>
+        <p class="about__statement" id="statement">I'm a DevOps engineer who turns <em>infrastructure into code</em> and slow pipelines into fast ones. I learned in the open, with <em>25+ merged PRs</em> across CNCF projects like kgateway. Today I keep things building, shipping and running at <em>Rover&nbsp;AI</em>.</p>
+
+        <div class="bento">
+          <article class="card spot card--now" data-reveal>
+            <div class="card__top">
+              <span class="badge badge--run"><i></i>Running</span>
+              <span class="card__kicker">Currently</span>
+            </div>
+            <h3 class="card__title">DevOps Engineer <span class="muted">@</span> Rover&nbsp;AI</h3>
+            <p class="uptime"><span class="uptime__label">uptime</span><span class="uptime__value" id="uptime">since 21 Sep 2026</span></p>
+            <p class="card__foot">joined 21 Sep 2026 · Pune, India</p>
+          </article>
+
+          <article class="card spot card--perf" data-reveal>
+            <span class="card__kicker">kgateway · LFX</span>
+            <p class="stat"><span data-count="97">97</span><span class="stat__unit">%</span></p>
+            <p class="card__text">faster end-to-end tests per feature, with a "fast test" pattern adopted as the project's improvement plan.</p>
+            <div class="race" aria-hidden="true">
+              <div class="race__row"><span>before</span><div class="race__bar"><i></i></div><b><span data-count="35" data-dur="3.4" data-ease="none">35</span>s</b></div>
+              <div class="race__row"><span>after</span><div class="race__bar race__bar--fast"><i></i></div><b><span data-count="1" data-dur=".35">1</span>s</b></div>
+            </div>
+          </article>
+
+          <article class="card spot" data-reveal>
+            <span class="card__kicker">Merged upstream</span>
+            <p class="stat"><span data-count="25">25</span><span class="stat__unit">+</span></p>
+            <p class="card__text">pull requests merged into open-source projects</p>
+          </article>
+
+          <article class="card spot" data-reveal>
+            <span class="card__kicker">Open source</span>
+            <p class="stat"><span data-count="7">7</span></p>
+            <p class="card__text">projects contributed to, including CNCF's kgateway, Antrea, Harbor and OpenTelemetry</p>
+          </article>
+
+          <article class="card spot" data-reveal>
+            <span class="card__kicker">GitHub stars</span>
+            <p class="stat"><span data-count="5.7" data-dec="1">5.7</span><span class="stat__unit">k</span></p>
+            <p class="card__text">on kgateway, the CNCF gateway whose test setup I helped modernize</p>
+          </article>
+
+          <article class="card spot" data-reveal>
+            <span class="card__kicker">Hosho Digital</span>
+            <p class="stat"><span data-count="4">4</span></p>
+            <p class="card__text">enterprise solutions shipped in one internship: automation, AI, BI and web</p>
+          </article>
+
+          <article class="card spot card--edu" data-reveal>
+            <span class="card__icon"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg></span>
+            <span class="card__kicker">Education</span>
+            <h3 class="card__title card__title--sm">B.Tech, Computer Science &amp; Engineering</h3>
+            <p class="card__text">Jabalpur Engineering College · 2022 — 2026</p>
+          </article>
+
+          <article class="card spot card--clock" data-reveal>
+            <span class="card__kicker">Based in</span>
+            <p class="card__big">India</p>
+            <p class="card__text mono"><time data-clock>--:--</time> IST · UTC+5:30</p>
+          </article>
+
+          <article class="card spot card--org" data-reveal>
+            <img src="assets/logos/kgateway.png" alt="" width="44" height="44" loading="lazy">
+            <span class="card__kicker">Org member</span>
+            <p class="card__text"><strong>kgateway-dev</strong> on GitHub, after an LFX mentorship in 2026</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>02</b>Skills</span>
+          <span class="section-head__cmd">$ kubectl describe node devesh</span>
+        </header>
+        <h2 class="section-title" data-split>Tools I <span class="grad">ship</span> with.</h2>
+        <p class="section-sub" data-reveal>A cloud-native toolbox, sharpened on real clusters, real pipelines and real upstream code reviews. Point at a group to light it up in the orbit.</p>
+
+        <div class="skills__layout">
+          <div class="orbit-wrap" data-reveal>
+            <div class="orbit" id="orbit">
+              <div class="orbit__core">
+                <span class="orbit__label" id="orbitLabel">18 tools</span>
+                <span class="orbit__sub" id="orbitSub">in orbit</span>
+              </div>
+              <div class="orbit__ring orbit__ring--1" style="--n:4;--dur:40s">
+                <span class="planet" style="--i:0" data-cats="orch test" data-name="Kubernetes"><span class="planet__in"><img src="assets/icons/kubernetes.svg" alt="Kubernetes" width="26" height="26"></span></span>
+                <span class="planet" style="--i:1" data-cats="cloud" data-name="AWS"><span class="planet__in"><img src="assets/icons/aws.svg" alt="AWS" width="26" height="26"></span></span>
+                <span class="planet" style="--i:2" data-cats="orch" data-name="Docker"><span class="planet__in"><img src="assets/icons/docker.svg" alt="Docker" width="26" height="26"></span></span>
+                <span class="planet" style="--i:3" data-cats="cloud" data-name="Terraform"><span class="planet__in"><img src="assets/icons/terraform.svg" alt="Terraform" width="26" height="26"></span></span>
+              </div>
+              <div class="orbit__ring orbit__ring--2" style="--n:7;--dur:64s">
+                <span class="planet" style="--i:0" data-cats="cicd" data-name="GitHub Actions"><span class="planet__in"><img src="assets/icons/github-actions.svg" alt="GitHub Actions" width="26" height="26"></span></span>
+                <span class="planet" style="--i:1" data-cats="orch cicd" data-name="Helm"><span class="planet__in"><img src="assets/icons/helm.svg" alt="Helm" width="26" height="26"></span></span>
+                <span class="planet" style="--i:2" data-cats="cloud cicd" data-name="Ansible"><span class="planet__in"><img src="assets/icons/ansible.svg" alt="Ansible" width="26" height="26"></span></span>
+                <span class="planet" style="--i:3" data-cats="cicd" data-name="Jenkins"><span class="planet__in"><img src="assets/icons/jenkins.svg" alt="Jenkins" width="26" height="26"></span></span>
+                <span class="planet" style="--i:4" data-cats="lang" data-name="Linux"><span class="planet__in"><img src="assets/icons/linux.svg" alt="Linux" width="26" height="26"></span></span>
+                <span class="planet" style="--i:5" data-cats="cicd lang" data-name="Git"><span class="planet__in"><img src="assets/icons/git.svg" alt="Git" width="26" height="26"></span></span>
+                <span class="planet" style="--i:6" data-cats="orch test" data-name="Envoy"><span class="planet__in"><img src="assets/icons/envoy.svg" alt="Envoy" width="26" height="26"></span></span>
+              </div>
+              <div class="orbit__ring orbit__ring--3" style="--n:7;--dur:90s">
+                <span class="planet" style="--i:0" data-cats="lang test" data-name="Go"><span class="planet__in"><img src="assets/icons/go.svg" alt="Go" width="26" height="26"></span></span>
+                <span class="planet" style="--i:1" data-cats="ai" data-name="Agentic AI"><span class="planet__in"><svg class="planet__svg" aria-label="Agentic AI" role="img"><use href="#i-ai"/></svg></span></span>
+                <span class="planet" style="--i:2" data-cats="lang" data-name="Java"><span class="planet__in"><img src="assets/icons/java.svg" alt="Java" width="26" height="26"></span></span>
+                <span class="planet" style="--i:3" data-cats="cloud" data-name="PostgreSQL"><span class="planet__in"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" width="26" height="26"></span></span>
+                <span class="planet" style="--i:4" data-cats="lang" data-name="Python"><span class="planet__in"><img src="assets/icons/python.svg" alt="Python" width="26" height="26"></span></span>
+                <span class="planet" style="--i:5" data-cats="ai" data-name="Power BI"><span class="planet__in"><svg class="planet__svg" aria-label="Power BI" role="img"><use href="#i-bars"/></svg></span></span>
+                <span class="planet" style="--i:6" data-cats="ai" data-name=".NET"><span class="planet__in"><img src="assets/icons/dotnet.svg" alt=".NET" width="26" height="26"></span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__grid">
+            <article class="skill-card spot" data-cat="orch" data-short="Orchestration" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">01</span><h3>Containers &amp; Orchestration</h3></div>
+              <ul class="chips">
+                <li><img src="assets/icons/kubernetes.svg" alt="" width="16" height="16">Kubernetes</li>
+                <li><img src="assets/icons/docker.svg" alt="" width="16" height="16">Docker</li>
+                <li><img src="assets/icons/helm.svg" alt="" width="16" height="16">Helm</li>
+                <li>kind</li>
+                <li>Gateway API</li>
+                <li><img src="assets/icons/envoy.svg" alt="" width="16" height="16">Envoy</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>Ran kgateway's E2E suites on kind clusters, wrote Deployment, Service, Ingress, ConfigMap, Secret &amp; HPA manifests, and added a Helm chart release target upstream.</p>
+            </article>
+
+            <article class="skill-card spot" data-cat="cloud" data-short="Cloud &amp; IaC" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">02</span><h3>Cloud &amp; Infrastructure as Code</h3></div>
+              <ul class="chips">
+                <li><img src="assets/icons/aws.svg" alt="" width="16" height="16">AWS</li>
+                <li>EC2 · RDS · IAM · S3</li>
+                <li><img src="assets/icons/terraform.svg" alt="" width="16" height="16">Terraform</li>
+                <li><img src="assets/icons/ansible.svg" alt="" width="16" height="16">Ansible</li>
+                <li><img src="assets/icons/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li>
+                <li>cert-manager</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>Provisioned EC2, RDS, IAM roles and security groups with Terraform, locked down with least-privilege policies.</p>
+            </article>
+
+            <article class="skill-card spot" data-cat="cicd" data-short="CI/CD" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">03</span><h3>CI/CD &amp; Automation</h3></div>
+              <ul class="chips">
+                <li><img src="assets/icons/github-actions.svg" alt="" width="16" height="16">GitHub Actions</li>
+                <li><img src="assets/icons/jenkins.svg" alt="" width="16" height="16">Jenkins</li>
+                <li><img src="assets/icons/git.svg" alt="" width="16" height="16">Git</li>
+                <li>Make</li>
+                <li>golangci-lint</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>Built build → test → deploy pipelines, enabled the nestif linter in kgateway's CI and contributed to Jenkins plugins.</p>
+            </article>
+
+            <article class="skill-card spot" data-cat="lang" data-short="Languages" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">04</span><h3>Languages &amp; Systems</h3></div>
+              <ul class="chips">
+                <li><img src="assets/icons/go.svg" alt="" width="16" height="16">Go</li>
+                <li><img src="assets/icons/java.svg" alt="" width="16" height="16">Java</li>
+                <li><img src="assets/icons/python.svg" alt="" width="16" height="16">Python</li>
+                <li><img src="assets/icons/linux.svg" alt="" width="16" height="16">Linux</li>
+                <li>Bash</li>
+                <li>YAML</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>19 merged Go PRs in kgateway, Java for Jenkins plugins and Selenium automation, and plenty of time at the Linux shell.</p>
+            </article>
+
+            <article class="skill-card spot" data-cat="test" data-short="Testing" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">05</span><h3>Testing &amp; Reliability</h3></div>
+              <ul class="chips">
+                <li>E2E testing</li>
+                <li>sigs.k8s.io/e2e-framework</li>
+                <li>Gateway API conformance</li>
+                <li>Load testing</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>Cut E2E time per feature from 35s to 1s and wrote kgateway's first E2E testing guide for contributors.</p>
+            </article>
+
+            <article class="skill-card spot" data-cat="ai" data-short="AI &amp; low-code" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">06</span><h3>AI, Low-code &amp; Web</h3></div>
+              <ul class="chips">
+                <li><svg class="chip-svg" aria-hidden="true"><use href="#i-ai"/></svg>Agentic AI</li>
+                <li>LLM integration</li>
+                <li><svg class="chip-svg" aria-hidden="true"><use href="#i-apps"/></svg>Power Apps</li>
+                <li><svg class="chip-svg" aria-hidden="true"><use href="#i-flow"/></svg>Power Automate</li>
+                <li><svg class="chip-svg" aria-hidden="true"><use href="#i-bars"/></svg>Power BI</li>
+                <li><img src="assets/icons/dotnet.svg" alt="" width="16" height="16">.NET</li>
+              </ul>
+              <p class="skill-card__proof"><span>In practice</span>Shipped 4 enterprise solutions at Hosho Digital, including LLM-powered procure-to-pay automation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>03</b>Experience</span>
+          <span class="section-head__cmd">$ git log --oneline career</span>
+        </header>
+        <h2 class="section-title" data-split>Where I've <span class="grad">shipped</span>.</h2>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__track" aria-hidden="true"><span class="timeline__fill"></span></div>
+
+          <article class="job is-current">
+            <span class="job__node" aria-hidden="true"></span>
+            <div class="job__side" data-reveal>
+              <p class="job__date">Sep 2026 — Present</p>
+              <span class="badge badge--run"><i></i>Running</span>
+            </div>
+            <div class="job__card spot" data-reveal>
+              <header class="job__head">
+                <div>
+                  <h3 class="job__role">DevOps Engineer</h3>
+                  <p class="job__org">Rover AI <span>· Pune, India</span></p>
+                </div>
+                <span class="job__logo job__logo--text" aria-hidden="true">R</span>
+              </header>
+              <ul class="job__points">
+                <li>Joined Rover AI's engineering team to work on the <strong>build, test and release</strong> side of its AI products.</li>
+                <li>Focused on <strong>CI/CD automation</strong>, containerized deployments and the cloud infrastructure behind them.</li>
+              </ul>
+              <ul class="tags"><li>DevOps</li><li>CI/CD</li><li>Docker</li><li>Cloud</li><li>Automation</li></ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <span class="job__node" aria-hidden="true"></span>
+            <div class="job__side" data-reveal>
+              <p class="job__date">May 2026 — Aug 2026</p>
+              <span class="badge badge--done">Complete</span>
+            </div>
+            <div class="job__card spot" data-reveal>
+              <header class="job__head">
+                <div>
+                  <h3 class="job__role">Software Engineer Intern</h3>
+                  <p class="job__org">Hosho Digital <span>· Indore, India</span></p>
+                </div>
+                <span class="job__logo job__logo--text" aria-hidden="true">H</span>
+              </header>
+              <ul class="job__points">
+                <li><strong>4 enterprise solutions delivered:</strong> Power Apps workflow automation, an agentic AI system, Power BI dashboards and the .NET HRX website.</li>
+                <li><strong>Procure-to-Pay automation:</strong> designed an end-to-end P2P solution in Power Apps that removed manual procurement steps, with an LLM for intelligent document processing.</li>
+                <li><strong>AI-powered workflows:</strong> built agentic AI solutions with LLM integration for multi-step task automation and decision-making.</li>
+                <li><strong>BI &amp; web:</strong> created real-time Power BI dashboards for stakeholders, and designed and deployed the HRX kit website on .NET.</li>
+              </ul>
+              <ul class="tags"><li>Power Apps</li><li>Power Automate</li><li>LLMs</li><li>Power BI</li><li>.NET</li></ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <span class="job__node" aria-hidden="true"></span>
+            <div class="job__side" data-reveal>
+              <p class="job__date">Mar 2026 — May 2026</p>
+              <span class="badge badge--done">Complete</span>
+            </div>
+            <div class="job__card spot" data-reveal>
+              <header class="job__head">
+                <div>
+                  <h3 class="job__role">Open Source Mentee</h3>
+                  <p class="job__org">CNCF LFX Mentorship · kgateway <span>· Remote</span></p>
+                </div>
+                <img class="job__logo" src="assets/logos/kgateway.png" alt="" width="48" height="48" loading="lazy">
+              </header>
+              <ul class="job__points">
+                <li><strong>97% faster tests:</strong> engineered a "fast test" pattern that cut E2E execution from 35s to 1s per feature, accepted as the project's official improvement plan.</li>
+                <li><strong>E2E framework overhaul:</strong> wrote the design doc comparing a custom framework with sigs.k8s.io/e2e-framework, built POCs and drove the adoption recommendation.</li>
+                <li><strong>Testing standards:</strong> created the project's first E2E testing developer guide, covering cluster setup, suite lifecycle and reusable test patterns.</li>
+                <li><strong>5.7k+ star project:</strong> modernized testing infrastructure for a CNCF cloud-native API &amp; AI gateway used in production.</li>
+              </ul>
+              <ul class="tags"><li>Go</li><li>Kubernetes</li><li>kind</li><li>Gateway API</li><li>E2E testing</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 OPEN SOURCE ============ -->
+    <section class="section oss" id="open-source">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>04</b>Open Source</span>
+          <span class="section-head__cmd">$ gh pr list --author devc007 --state merged</span>
+        </header>
+        <h2 class="section-title" data-split>Merged <span class="grad">upstream</span>.</h2>
+        <p class="section-sub" data-reveal>I learn in public, through code review on real CNCF projects: 25+ merged pull requests across 7 open-source projects.</p>
+
+        <article class="oss-feature spot" data-reveal>
+          <div class="oss-feature__info">
+            <div class="oss-feature__brand">
+              <img src="assets/logos/kgateway.png" alt="kgateway logo" width="60" height="60" loading="lazy">
+              <div>
+                <h3>kgateway</h3>
+                <p>CNCF · cloud-native API &amp; AI gateway</p>
+              </div>
+            </div>
+            <ul class="oss-feature__stats">
+              <li><b data-count="19">19</b>merged PRs</li>
+              <li><b>5.7k</b>GitHub stars</li>
+              <li><b>LFX '26</b>mentee</li>
+              <li><b>Org</b>member</li>
+            </ul>
+            <p class="oss-feature__text">From linters and Helm release tooling to a full overhaul of end-to-end testing, this is my longest-running open-source home.</p>
+            <a class="link-arrow" href="https://github.com/kgateway-dev/kgateway/pulls?q=is%3Apr+author%3Adevc007+is%3Amerged" target="_blank" rel="noopener">See all my kgateway PRs<svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+          </div>
+          <ol class="pr-list">
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/14125" target="_blank" rel="noopener"><span class="pr-list__no">#14125</span><span class="pr-list__title">Fast test pattern for the extProc and header-modifier suites</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/14140" target="_blank" rel="noopener"><span class="pr-list__no">#14140</span><span class="pr-list__title">Share Nginx backend pods across E2E suites</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/14128" target="_blank" rel="noopener"><span class="pr-list__no">#14128</span><span class="pr-list__title">Design doc: choosing the next E2E testing framework</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/13672" target="_blank" rel="noopener"><span class="pr-list__no">#13672</span><span class="pr-list__title">E2E testing framework overview for contributors</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/13481" target="_blank" rel="noopener"><span class="pr-list__no">#13481</span><span class="pr-list__title">Enable the nestif linter in CI checks</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/13229" target="_blank" rel="noopener"><span class="pr-list__no">#13229</span><span class="pr-list__title">Bump kind to v0.31.0 and the node image to Kubernetes v1.35</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+            <li><a href="https://github.com/kgateway-dev/kgateway/pull/11663" target="_blank" rel="noopener"><span class="pr-list__no">#11663</span><span class="pr-list__title">Make target for releasing Helm charts</span><span class="pr-list__state"><svg class="i" aria-hidden="true"><use href="#i-merge"/></svg>merged</span></a></li>
+          </ol>
+        </article>
+
+        <div class="oss-grid">
+          <a class="oss-card spot" href="https://github.com/antrea-io/antrea/pull/6913" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/logos/antrea.png" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>Antrea</h3>
+            <p class="oss-card__what">CNCF · Kubernetes networking with Open vSwitch</p>
+            <p class="oss-card__pr"><span>#6913</span>Skip <code>TestFQDNCacheMinTTL</code> on clusters with Windows nodes</p>
+          </a>
+          <a class="oss-card spot" href="https://github.com/goharbor/harbor-cli/pull/496" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/icons/harbor.svg" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>Harbor CLI</h3>
+            <p class="oss-card__what">CNCF · cloud-native container registry</p>
+            <p class="oss-card__pr"><span>#496</span>Default <code>FormatUrl</code> to HTTPS instead of HTTP</p>
+          </a>
+          <a class="oss-card spot" href="https://github.com/open-telemetry/opentelemetry.io/pull/4388" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/icons/opentelemetry.svg" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>OpenTelemetry</h3>
+            <p class="oss-card__what">CNCF · observability framework</p>
+            <p class="oss-card__pr"><span>#4388</span>Docs: using instrumentation libraries for C++</p>
+          </a>
+          <a class="oss-card spot" href="https://github.com/kcl-lang/flux-kcl-controller/pull/236" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/logos/kcl.png" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>KCL</h3>
+            <p class="oss-card__what">CNCF · configuration language &amp; Flux controller</p>
+            <p class="oss-card__pr"><span>#236</span>Make the flux-kcl-controller docs scripts work on Windows</p>
+          </a>
+          <a class="oss-card spot" href="https://github.com/kubeflow/website/pull/4151" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/icons/kubeflow.svg" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>Kubeflow</h3>
+            <p class="oss-card__what">CNCF · machine learning on Kubernetes</p>
+            <p class="oss-card__pr"><span>#4151</span>Website: tidy the nav bar and move past events</p>
+          </a>
+          <a class="oss-card spot" href="https://github.com/jenkinsci/embeddable-build-status-plugin/pull/272" target="_blank" rel="noopener" data-reveal>
+            <span class="oss-card__top"><img src="assets/icons/jenkins.svg" alt="" width="40" height="40" loading="lazy"><svg class="i oss-card__arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+            <h3>Jenkins</h3>
+            <p class="oss-card__what">CD Foundation · automation server</p>
+            <p class="oss-card__pr"><span>#272</span>Increase test coverage of the embeddable-build-status plugin</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>05</b>Projects</span>
+          <span class="section-head__cmd">$ ls ~/projects</span>
+        </header>
+        <h2 class="section-title" data-split>Selected <span class="grad">builds</span>.</h2>
+
+        <div class="projects__grid">
+          <article class="project spot tilt" data-reveal>
+            <div class="project__visual" aria-hidden="true">
+              <div class="pipe" data-pipe>
+                <div class="pipe__track"><span class="pipe__packet"></span></div>
+                <ol class="pipe__stages">
+                  <li class="pipe__stage"><i></i>push</li>
+                  <li class="pipe__stage"><i></i>build</li>
+                  <li class="pipe__stage"><i></i>test</li>
+                  <li class="pipe__stage"><i></i>deploy</li>
+                  <li class="pipe__stage"><i></i>scale</li>
+                </ol>
+                <div class="pipe__log">
+                  <span>✓ image built</span><span>✓ tests passed</span><span>✓ rollout complete</span><span>↗ HPA scaling</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Kubernetes · CI/CD</p>
+              <h3>Kubernetes Deployment Pipeline</h3>
+              <p>A containerized Python app shipped to Kubernetes by a GitHub Actions pipeline that builds, tests and deploys on every push.</p>
+              <ul class="project__points">
+                <li>Deployment, Service, ConfigMap, Secret, Ingress and HPA manifests with horizontal autoscaling</li>
+                <li>PostgreSQL cluster secured with TLS certificates from cert-manager</li>
+                <li>Scalability validated with load testing</li>
+              </ul>
+              <ul class="tags"><li>Kubernetes</li><li>Docker</li><li>GitHub Actions</li><li>PostgreSQL</li><li>Python</li></ul>
+            </div>
+          </article>
+
+          <article class="project spot tilt" data-reveal>
+            <div class="project__visual" aria-hidden="true">
+              <div class="mini-term">
+                <div class="mini-term__bar"><i></i><i></i><i></i></div>
+                <div class="mini-term__body" data-typeout>
+                  <span><b>$</b> terraform apply</span>
+                  <span>aws_iam_role.app: <em>Creation complete</em></span>
+                  <span>aws_security_group.web: <em>Creation complete</em></span>
+                  <span>aws_instance.app: <em>Creation complete</em></span>
+                  <span>aws_db_instance.db: <em>Creation complete</em></span>
+                  <span class="ok">Apply complete!</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">AWS · Infrastructure as Code</p>
+              <h3>AWS Infrastructure Automation</h3>
+              <p>Cloud infrastructure defined entirely in Terraform: compute, database, identity and network rules, reproducible from a single apply.</p>
+              <ul class="project__points">
+                <li>EC2, IAM roles, security groups and an RDS SQL database provisioned as code</li>
+                <li>Least-privilege IAM policies and tight security-group rules for secure access</li>
+              </ul>
+              <ul class="tags"><li>AWS</li><li>Terraform</li><li>EC2</li><li>RDS</li><li>IAM</li></ul>
+            </div>
+          </article>
+
+          <article class="project spot tilt" data-reveal>
+            <div class="project__visual" aria-hidden="true">
+              <div class="mini-term">
+                <div class="mini-term__bar"><i></i><i></i><i></i></div>
+                <div class="mini-term__body" data-typeout>
+                  <span><b>$</b> go test ./test/e2e/...</span>
+                  <span>=== RUN   extproc suite</span>
+                  <span><em>--- PASS</em>  shared setup, fast path</span>
+                  <span>=== RUN   header_modifier suite</span>
+                  <span><em>--- PASS</em>  shared setup, fast path</span>
+                  <span class="ok">ok   35s → 1s per feature</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Open source · Go · Kubernetes</p>
+              <h3>kgateway Fast E2E Tests</h3>
+              <p>A "fast test" pattern for kgateway's end-to-end suites: share expensive setup and consolidate backends, so a feature test runs in about a second.</p>
+              <ul class="project__points">
+                <li>E2E time per feature: 35s → 1s (97% faster)</li>
+                <li>Design doc and POCs for moving to sigs.k8s.io/e2e-framework</li>
+              </ul>
+              <ul class="tags"><li>Go</li><li>Kubernetes</li><li>kind</li><li>E2E</li></ul>
+              <a class="link-arrow" href="https://github.com/kgateway-dev/kgateway/pull/14125" target="_blank" rel="noopener">View the pull request<svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </article>
+
+          <article class="project spot tilt" data-reveal>
+            <div class="project__visual" aria-hidden="true">
+              <ol class="flow" data-flow>
+                <li class="flow__step" style="--area:1/1">Request</li>
+                <li class="flow__arrow" style="--area:1/2">→</li>
+                <li class="flow__step flow__step--ai" style="--area:1/3"><svg aria-hidden="true"><use href="#i-ai"/></svg>LLM reads docs</li>
+                <li class="flow__arrow" style="--area:1/4">→</li>
+                <li class="flow__step" style="--area:1/5">Approve</li>
+                <li class="flow__arrow" style="--area:2/5">↓</li>
+                <li class="flow__step" style="--area:3/5">PO</li>
+                <li class="flow__arrow" style="--area:3/4">←</li>
+                <li class="flow__step" style="--area:3/3">Invoice</li>
+                <li class="flow__arrow" style="--area:3/2">←</li>
+                <li class="flow__step" style="--area:3/1">Pay</li>
+              </ol>
+            </div>
+            <div class="project__body">
+              <p class="project__kicker">Power Platform · LLM · Hosho Digital</p>
+              <h3>Procure-to-Pay Automation</h3>
+              <p>An end-to-end procurement workflow in Power Apps that replaces manual hand-offs, with an LLM that reads and extracts data from business documents.</p>
+              <ul class="project__points">
+                <li>Manual procurement steps removed from request to payment</li>
+                <li>LLM-based intelligent document processing</li>
+              </ul>
+              <ul class="tags"><li>Power Apps</li><li>Power Automate</li><li>LLMs</li><li>Agentic AI</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects__more" data-reveal>
+          <a class="btn btn--ghost magnetic" href="https://github.com/devc007" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg><span>More on GitHub</span><svg class="i i--ur" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-head__label"><b>06</b>Contact</span>
+          <span class="section-head__cmd">$ ping devesh -c 1</span>
+        </header>
+        <h2 class="contact__title" data-split>Let's build something <span class="grad">reliable</span>.</h2>
+        <p class="contact__text" data-reveal>Have a hard infrastructure problem, an open-source idea, or just want to talk Kubernetes? My inbox is open.</p>
+        <div class="contact__actions" data-reveal>
+          <a class="btn btn--primary btn--lg magnetic" href="mailto:deveshc850@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span>deveshc850@gmail.com</span></a>
+          <button class="btn btn--ghost btn--lg magnetic" type="button" data-copy="deveshc850@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy email</span></button>
+        </div>
+        <ul class="contact__links" data-reveal>
+          <li><a href="https://www.linkedin.com/in/devesh-chauhan-715794276/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+          <li><a href="https://github.com/devc007" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub<svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+        </ul>
+        <a class="contact__badge magnetic" href="mailto:deveshc850@gmail.com" aria-label="Email Devesh">
+          <svg class="contact__ring" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="ringPath" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs>
+            <text><textPath href="#ringPath" textLength="486" lengthAdjust="spacing">LET'S TALK INFRA ✦ SHIP IT ✦ KEEP IT RUNNING ✦ </textPath></text>
+          </svg>
+          <span class="contact__core"><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Devesh Chouhan</p>
+      <p class="footer__status"><span class="pulse pulse--sm" aria-hidden="true"></span>All systems operational</p>
+      <p class="footer__build">HTML, CSS &amp; GSAP · shipped by GitHub Actions · <span id="build" data-sha="__BUILD_SHA__">build local</span></p>
+      <a class="footer__top" href="#top">Back to top ↑</a>
+    </div>
+    <div class="footer__mark" aria-hidden="true">devesh</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/SplitText.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/network.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

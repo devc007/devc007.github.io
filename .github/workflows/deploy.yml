@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; let an in-progress deploy finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Validate & build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Validate HTML
+        run: npx --yes html-validate@10.17.0 index.html 404.html
+        env:
+          npm_config_legacy_peer_deps: "true"
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check assets/js/main.js
+          node --check assets/js/network.js
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r index.html 404.html robots.txt sitemap.xml assets _site/
+          sed -i "s/__BUILD_SHA__/${GITHUB_SHA}/" _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

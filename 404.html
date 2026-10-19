@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404: page not found · Devesh Chouhan</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .nf { position: relative; z-index: 2; min-height: 100vh; min-height: 100svh; display: grid; place-content: center; gap: 28px; padding: 48px var(--gutter); }
+    .nf__code { font-family: var(--font-display); font-weight: 700; font-size: clamp(6rem, 24vw, 15rem); line-height: 0.8; letter-spacing: -0.07em; }
+    .nf__code span { color: var(--accent); }
+    .nf__text { max-width: 44ch; font-size: 1.1rem; color: var(--text-2); }
+    .nf .terminal { max-width: 640px; }
+    .nf .terminal__body { min-height: 0; white-space: pre-wrap; word-break: break-all; }
+    .t-err { color: #ff6b6b; }
+  </style>
+</head>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+  <main class="nf">
+    <p class="nf__code" aria-hidden="true">404<span>.</span></p>
+    <h1 class="nf__text">This route isn't deployed. The page you asked for doesn't exist, or it moved.</h1>
+    <figure class="terminal" aria-label="Terminal: page not found">
+      <div class="terminal__bar">
+        <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="terminal__title">devesh@rover: ~</span>
+        <span class="terminal__tag">zsh</span>
+      </div>
+      <pre class="terminal__body"><span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> kubectl get page <span id="path">this-page</span>
+<span class="t-err">Error from server (NotFound): pages "<span id="path2">this-page</span>" not found</span>
+<span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> kubectl rollout undo page --to-revision=home <span class="t-caret"></span></pre>
+    </figure>
+    <p><a class="btn btn--primary" href="/"><span>Back to home</span></a></p>
+  </main>
+  <script>
+    (function () {
+      var p = decodeURIComponent(location.pathname).slice(0, 80) || '/';
+      document.getElementById('path').textContent = p;
+      document.getElementById('path2').textContent = p;
+    })();
+  </script>
+</body>
+</html>
