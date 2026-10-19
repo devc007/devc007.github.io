@@ -435,7 +435,7 @@
       const counter = { v: 0 };
       const tl = gsap.timeline();
       tl.to(counter, {
-        v: 100, duration: 1.9, ease: 'power2.inOut',
+        v: 100, duration: 1.35, ease: 'power2.inOut',
         onUpdate: () => {
           const v = Math.round(counter.v);
           countEl.textContent = v;
@@ -448,18 +448,18 @@
           if (cls) p.className = cls;
           p.textContent = text;
           box.appendChild(p);
-        }, null, 0.1 + i * 0.28);
+        }, null, 0.08 + i * 0.2);
       });
-      tl.to(boot, { yPercent: -100, duration: 1.05, ease: 'expo.inOut' }, 2.2);
+      tl.to(boot, { yPercent: -100, duration: 0.95, ease: 'expo.inOut' }, 1.5);
       tl.call(() => {
         try { sessionStorage.setItem('booted', '1'); } catch (e) { /* private mode */ }
         resolve();
-      }, null, 2.5);
+      }, null, 1.75);
       tl.call(() => {
         boot.remove();
         root.classList.remove('is-booting');
         if (lenis) lenis.start();
-      }, null, 3.3);
+      }, null, 2.5);
     });
   }
 
@@ -509,12 +509,14 @@
         });
       });
 
-      // About statement: words light up as you scroll
+      // About statement: words light up as you scroll. Word spans read fine in
+      // screen readers, so no ARIA rewrite (aria-label is not allowed on <p>).
+      // The start opacity keeps unread words at 3:1 contrast or better.
       const statement = $('#statement');
       if (statement) {
         SplitText.create(statement, {
-          type: 'words', autoSplit: true,
-          onSplit: (self) => gsap.fromTo(self.words, { opacity: 0.14 }, {
+          type: 'words', autoSplit: true, aria: 'none',
+          onSplit: (self) => gsap.fromTo(self.words, { opacity: 0.4 }, {
             opacity: 1, stagger: 0.1, ease: 'none',
             scrollTrigger: { trigger: statement, start: 'top 82%', end: 'bottom 48%', scrub: 0.6 },
           }),
@@ -637,7 +639,7 @@
 
   /* ---------- Start ---------- */
   const fontsReady = document.fonts && document.fonts.ready
-    ? Promise.race([document.fonts.ready, sleep(1500)])
+    ? Promise.race([document.fonts.ready, sleep(900)])
     : Promise.resolve();
 
   fontsReady.then(() => {

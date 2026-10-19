@@ -22,7 +22,7 @@ Plain HTML, CSS and JavaScript, with no build step.
 | --- | --- |
 | Animation | [GSAP](https://gsap.com) 3.15 (ScrollTrigger, SplitText) |
 | Smooth scroll | [Lenis](https://github.com/darkroomengineering/lenis) 1.3 |
-| Fonts | Space Grotesk, Inter, JetBrains Mono (Google Fonts) |
+| Fonts | Space Grotesk, Inter, JetBrains Mono (self-hosted, SIL OFL 1.1) |
 | Tech logos | [Devicon](https://devicon.dev) |
 | CI/CD | GitHub Actions → GitHub Pages |
 
@@ -35,6 +35,7 @@ assets/css/style.css        # design tokens, layout, effects
 assets/js/main.js           # boot, intro, scroll animations, interactions
 assets/js/network.js        # hero canvas (nodes + packets)
 assets/vendor/              # GSAP + Lenis (pinned copies)
+assets/fonts/               # variable woff2 fonts + their OFL licenses
 assets/icons/, logos/, img/ # logos, social preview, favicon
 .github/workflows/deploy.yml
 ```

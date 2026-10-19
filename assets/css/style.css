@@ -3,6 +3,11 @@
    Dark "control plane" theme: near-black, signal lime + cyan, big type.
    ========================================================================== */
 
+/* ---------- Fonts (self-hosted variable fonts, SIL OFL 1.1: assets/fonts/OFL-*.txt) ---------- */
+@font-face { font-family: "Space Grotesk"; src: url("../fonts/space-grotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/inter-latin.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/jetbrains-mono-latin.woff2") format("woff2"); font-weight: 100 800; font-style: normal; font-display: swap; }
+
 :root {
   --bg: #07090d;
   --bg-2: #0b0e14;
