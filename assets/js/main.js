@@ -78,7 +78,7 @@
     { out: jobRow('lfx-mentee.kgateway', 'Complete', 't-dim', '3mo') },
     { out: '' },
     { cmd: 'cat focus.txt' },
-    { out: '<span class="t-ok">kubernetes</span> · aws · terraform · ci/cd · go' },
+    { out: '<span class="t-ok">observability</span> · kubernetes · aws · terraform · go' },
     { out: '' },
   ];
   const lineHTML = (step) => (step.cmd != null ? `${PROMPT}<span class="t-cmd">${step.cmd}</span>` : step.out);
@@ -379,7 +379,7 @@
   function startRotator() {
     const el = $('#rotator');
     if (!el) return;
-    const words = ['cloud-native infrastructure', 'Kubernetes workloads', 'CI/CD pipelines', 'infrastructure as code', 'faster feedback loops'];
+    const words = ['cloud-native infrastructure', 'observability stacks', 'Kubernetes workloads', 'CI/CD pipelines', 'infrastructure as code', 'faster feedback loops'];
     let i = 0;
     setInterval(() => {
       if (document.hidden) return;

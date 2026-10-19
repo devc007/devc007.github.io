@@ -9,7 +9,7 @@ Personal portfolio of **Devesh Chouhan**, DevOps Engineer at Rover AI and former
 ## Highlights
 
 - **Kubernetes-flavoured motion:** a `kubectl rollout` boot screen, a live terminal (`kubectl get jobs -n career`), and a hero canvas where packets hop across a cluster of nodes.
-- **Skills orbit:** 18 tools on three rotating rings. Point at a skill group to light up its tools.
+- **Skills orbit:** 20 tools on three rotating rings. Point at a skill group to light up its tools.
 - **Live details:** uptime since joining Rover AI, IST clock, and the build SHA stamped in the footer by CI.
 - **Scroll storytelling** with GSAP ScrollTrigger and SplitText, plus Lenis smooth scrolling.
 - **Accessible and progressive:** readable without JavaScript, respects `prefers-reduced-motion`, and passes axe and html-validate.

@@ -59,7 +59,7 @@
       "https://github.com/devc007",
       "https://www.linkedin.com/in/devesh-chauhan-715794276/"
     ],
-    "knowsAbout": ["DevOps", "Kubernetes", "AWS", "Terraform", "CI/CD", "Docker", "Helm", "GitHub Actions", "Go", "Infrastructure as Code"]
+    "knowsAbout": ["DevOps", "Kubernetes", "AWS", "Terraform", "CI/CD", "Docker", "Helm", "GitHub Actions", "Go", "Infrastructure as Code", "Prometheus", "Grafana", "Loki", "Observability"]
   }
   </script>
 </head>
@@ -81,6 +81,7 @@
       <symbol id="i-ai" viewBox="0 0 24 24"><g fill="none" stroke="#c6ff3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3.5c.5 3.6 2.4 5.5 6 6-3.6.5-5.5 2.4-6 6-.5-3.6-2.4-5.5-6-6 3.6-.5 5.5-2.4 6-6Z"/><path d="M18 14c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3Z"/></g></symbol>
       <symbol id="i-bars" viewBox="0 0 24 24"><g fill="#f2c811"><rect x="4" y="11" width="4" height="9" rx="1.2" opacity=".65"/><rect x="10" y="7" width="4" height="13" rx="1.2" opacity=".85"/><rect x="16" y="3" width="4" height="17" rx="1.2"/></g></symbol>
       <symbol id="i-flow" viewBox="0 0 24 24"><g fill="none" stroke="#3de0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/><path d="M10 6.5h4.5a3 3 0 0 1 3 3V14"/><path d="m15.5 12 2 2 2-2"/></g></symbol>
+      <symbol id="i-logs" viewBox="0 0 24 24"><path fill="none" stroke="#f6c343" stroke-width="2" stroke-linecap="round" d="M4 6h2M9 6h11M4 12h2M9 12h8M4 18h2M9 18h10"/></symbol>
       <symbol id="i-apps" viewBox="0 0 24 24"><g fill="#a78bfa"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2" opacity=".7"/><rect x="3" y="13" width="8" height="8" rx="2" opacity=".7"/><rect x="13" y="13" width="8" height="8" rx="2" opacity=".45"/></g></symbol>
     </defs>
   </svg>
@@ -151,7 +152,7 @@
         <div class="hero__row">
           <div class="hero__copy">
             <p class="hero__lead" data-hero>I build, automate &amp; scale<br>
-              <span class="visually-hidden">cloud-native infrastructure, Kubernetes workloads, CI/CD pipelines and infrastructure as code.</span>
+              <span class="visually-hidden">cloud-native infrastructure, observability stacks, Kubernetes workloads, CI/CD pipelines and infrastructure as code.</span>
               <span class="rotator" aria-hidden="true"><span class="rotator__word" id="rotator">cloud-native infrastructure</span></span>
             </p>
             <p class="hero__text" data-hero>DevOps Engineer at <strong>Rover AI</strong> and former <strong>CNCF LFX mentee</strong> at kgateway, where I made end-to-end tests <strong class="hl">97% faster</strong>. Kubernetes, AWS, Terraform and Go are my everyday tools.</p>
@@ -182,7 +183,7 @@ swe-intern.hosho-digital   <span class="t-dim">Complete</span>   4mo
 lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
 
 <span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-cmd">cat focus.txt</span>
-<span class="t-ok">kubernetes</span> · aws · terraform · ci/cd · go
+<span class="t-ok">observability</span> · kubernetes · aws · terraform · go
 
 <span class="t-prompt">devesh@rover</span><span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span> <span class="t-caret"></span></pre>
           </figure>
@@ -207,6 +208,7 @@ lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
           <span class="tape__item">Open Source<svg><use href="#i-spark"/></svg></span>
           <span class="tape__item">Agentic AI<svg><use href="#i-spark"/></svg></span>
           <span class="tape__item">Reliability<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Observability<svg><use href="#i-spark"/></svg></span>
         </div>
       </div>
       <div class="tape tape--lime">
@@ -220,6 +222,8 @@ lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
           <span class="tape__item">Ansible<svg><use href="#i-spark"/></svg></span>
           <span class="tape__item">Go<svg><use href="#i-spark"/></svg></span>
           <span class="tape__item">Linux<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Prometheus<svg><use href="#i-spark"/></svg></span>
+          <span class="tape__item">Grafana<svg><use href="#i-spark"/></svg></span>
         </div>
       </div>
     </div>
@@ -316,32 +320,34 @@ lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
           <div class="orbit-wrap" data-reveal>
             <div class="orbit" id="orbit">
               <div class="orbit__core">
-                <span class="orbit__label" id="orbitLabel">18 tools</span>
+                <span class="orbit__label" id="orbitLabel">20 tools</span>
                 <span class="orbit__sub" id="orbitSub">in orbit</span>
               </div>
               <div class="orbit__ring orbit__ring--1" style="--n:4;--dur:40s">
-                <span class="planet" style="--i:0" data-cats="orch test" data-name="Kubernetes"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/kubernetes.svg" alt="Kubernetes" width="26" height="26"></span></span>
+                <span class="planet" style="--i:0" data-cats="orch rel" data-name="Kubernetes"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/kubernetes.svg" alt="Kubernetes" width="26" height="26"></span></span>
                 <span class="planet" style="--i:1" data-cats="cloud" data-name="AWS"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/aws.svg" alt="AWS" width="26" height="26"></span></span>
                 <span class="planet" style="--i:2" data-cats="orch" data-name="Docker"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/docker.svg" alt="Docker" width="26" height="26"></span></span>
                 <span class="planet" style="--i:3" data-cats="cloud" data-name="Terraform"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/terraform.svg" alt="Terraform" width="26" height="26"></span></span>
               </div>
-              <div class="orbit__ring orbit__ring--2" style="--n:7;--dur:64s">
+              <div class="orbit__ring orbit__ring--2" style="--n:8;--dur:64s">
                 <span class="planet" style="--i:0" data-cats="cicd" data-name="GitHub Actions"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/github-actions.svg" alt="GitHub Actions" width="26" height="26"></span></span>
                 <span class="planet" style="--i:1" data-cats="orch cicd" data-name="Helm"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/helm.svg" alt="Helm" width="26" height="26"></span></span>
                 <span class="planet" style="--i:2" data-cats="cloud cicd" data-name="Ansible"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/ansible.svg" alt="Ansible" width="26" height="26"></span></span>
                 <span class="planet" style="--i:3" data-cats="cicd" data-name="Jenkins"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/jenkins.svg" alt="Jenkins" width="26" height="26"></span></span>
                 <span class="planet" style="--i:4" data-cats="lang" data-name="Linux"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/linux.svg" alt="Linux" width="26" height="26"></span></span>
                 <span class="planet" style="--i:5" data-cats="cicd lang" data-name="Git"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/git.svg" alt="Git" width="26" height="26"></span></span>
-                <span class="planet" style="--i:6" data-cats="orch test" data-name="Envoy"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/envoy.svg" alt="Envoy" width="26" height="26"></span></span>
+                <span class="planet" style="--i:6" data-cats="orch rel" data-name="Envoy"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/envoy.svg" alt="Envoy" width="26" height="26"></span></span>
+                <span class="planet" style="--i:7" data-cats="rel" data-name="Prometheus"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/prometheus.svg" alt="Prometheus" width="26" height="26"></span></span>
               </div>
-              <div class="orbit__ring orbit__ring--3" style="--n:7;--dur:90s">
-                <span class="planet" style="--i:0" data-cats="lang test" data-name="Go"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/go.svg" alt="Go" width="26" height="26"></span></span>
+              <div class="orbit__ring orbit__ring--3" style="--n:8;--dur:90s">
+                <span class="planet" style="--i:0" data-cats="lang rel" data-name="Go"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/go.svg" alt="Go" width="26" height="26"></span></span>
                 <span class="planet" style="--i:1" data-cats="ai" data-name="Agentic AI"><span class="planet__in"><svg class="planet__svg" aria-label="Agentic AI" role="img"><use href="#i-ai"/></svg></span></span>
                 <span class="planet" style="--i:2" data-cats="lang" data-name="Java"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/java.svg" alt="Java" width="26" height="26"></span></span>
                 <span class="planet" style="--i:3" data-cats="cloud" data-name="PostgreSQL"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/postgresql.svg" alt="PostgreSQL" width="26" height="26"></span></span>
                 <span class="planet" style="--i:4" data-cats="lang" data-name="Python"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/python.svg" alt="Python" width="26" height="26"></span></span>
                 <span class="planet" style="--i:5" data-cats="ai" data-name="Power BI"><span class="planet__in"><svg class="planet__svg" aria-label="Power BI" role="img"><use href="#i-bars"/></svg></span></span>
                 <span class="planet" style="--i:6" data-cats="ai" data-name=".NET"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/dotnet.svg" alt=".NET" width="26" height="26"></span></span>
+                <span class="planet" style="--i:7" data-cats="rel" data-name="Grafana"><span class="planet__in"><img loading="lazy" decoding="async" src="assets/icons/grafana.svg" alt="Grafana" width="26" height="26"></span></span>
               </div>
             </div>
           </div>
@@ -398,15 +404,18 @@ lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
               <p class="skill-card__proof"><span>In practice</span>19 merged Go PRs in kgateway, Java for Jenkins plugins and Selenium automation, and plenty of time at the Linux shell.</p>
             </article>
 
-            <article class="skill-card spot" data-cat="test" data-short="Testing" tabindex="0" data-reveal>
-              <div class="skill-card__head"><span class="skill-card__no">05</span><h3>Testing &amp; Reliability</h3></div>
+            <article class="skill-card spot" data-cat="rel" data-short="Observability" tabindex="0" data-reveal>
+              <div class="skill-card__head"><span class="skill-card__no">05</span><h3>Observability &amp; Reliability</h3></div>
               <ul class="chips">
+                <li><img loading="lazy" decoding="async" src="assets/icons/prometheus.svg" alt="" width="16" height="16">Prometheus</li>
+                <li><img loading="lazy" decoding="async" src="assets/icons/grafana.svg" alt="" width="16" height="16">Grafana</li>
+                <li><svg class="chip-svg" aria-hidden="true"><use href="#i-logs"/></svg>Loki</li>
                 <li>E2E testing</li>
                 <li>sigs.k8s.io/e2e-framework</li>
                 <li>Gateway API conformance</li>
                 <li>Load testing</li>
               </ul>
-              <p class="skill-card__proof"><span>In practice</span>Cut E2E time per feature from 35s to 1s and wrote kgateway's first E2E testing guide for contributors.</p>
+              <p class="skill-card__proof"><span>In practice</span>Building Grafana dashboards and a Prometheus + Loki deployment strategy at Rover AI. At kgateway, cut E2E time per feature from 35s to 1s.</p>
             </article>
 
             <article class="skill-card spot" data-cat="ai" data-short="AI &amp; low-code" tabindex="0" data-reveal>
@@ -453,10 +462,10 @@ lfx-mentee.kgateway        <span class="t-dim">Complete</span>   3mo
                 <span class="job__logo job__logo--text" aria-hidden="true">R</span>
               </header>
               <ul class="job__points">
-                <li>Joined Rover AI's engineering team to work on the <strong>build, test and release</strong> side of its AI products.</li>
-                <li>Focused on <strong>CI/CD automation</strong>, containerized deployments and the cloud infrastructure behind them.</li>
+                <li><strong>Monitoring &amp; observability:</strong> building Grafana dashboards that give the team clear visibility into its systems.</li>
+                <li><strong>Metrics &amp; logs:</strong> designing the deployment strategy for Prometheus and Loki.</li>
               </ul>
-              <ul class="tags"><li>DevOps</li><li>CI/CD</li><li>Docker</li><li>Cloud</li><li>Automation</li></ul>
+              <ul class="tags"><li>Grafana</li><li>Prometheus</li><li>Loki</li><li>Observability</li><li>DevOps</li></ul>
             </div>
           </article>
 
