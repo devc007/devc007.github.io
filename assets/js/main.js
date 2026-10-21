@@ -73,7 +73,7 @@
     { out: '' },
     { cmd: 'kubectl get jobs -n career' },
     { out: `<span class="t-dim">${'NAME'.padEnd(27)}${'STATUS'.padEnd(11)}DURATION</span>` },
-    { out: jobRow('devops-engineer.rover-ai', 'Running', 't-ok', kubeAge(ROVER_START)) },
+    { out: jobRow('devops-intern.rover-ai', 'Running', 't-ok', kubeAge(ROVER_START)) },
     { out: jobRow('swe-intern.hosho-digital', 'Complete', 't-dim', '4mo') },
     { out: jobRow('lfx-mentee.kgateway', 'Complete', 't-dim', '3mo') },
     { out: '' },

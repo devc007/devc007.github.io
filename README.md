@@ -1,6 +1,6 @@
 # devc007.github.io
 
-Personal portfolio of **Devesh Chouhan**, DevOps Engineer at Rover AI and former CNCF LFX mentee at [kgateway](https://github.com/kgateway-dev/kgateway).
+Personal portfolio of **Devesh Chouhan**, DevOps Engineer Intern at Rover AI and former CNCF LFX mentee at [kgateway](https://github.com/kgateway-dev/kgateway).
 
 **Live:** https://devc007.github.io
 

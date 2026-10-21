@@ -853,6 +853,11 @@ main { overflow-x: clip; }
   .status-chip { font-size: 12.5px; }
   .section-head__cmd { width: 100%; }
 }
+/* Keep the hero chip on one line on the smallest phones; the pulse still reads as "running". */
+@media (max-width: 360px) {
+  .status-chip__state { display: none; }
+  .status-chip__text { padding-left: 0; border-left: 0; }
+}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
